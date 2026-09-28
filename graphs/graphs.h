@@ -2,6 +2,7 @@
 #define GRAPHS_H
 #include <stddef.h>
 #include <stdlib.h>
+#include <string.h>
 
 /**
  * enum edge_type_e - Enumerates the different types of
@@ -72,5 +73,9 @@ vertex_t *graph_add_vertex(graph_t *graph, const char *str);
 void graph_display(const graph_t *graph);
 vertex_t *populate_vertex(vertex_t *new_vertex, const char *str,
                           graph_t *graph);
+int graph_add_edge(graph_t *graph, const char *src, const char *dest,
+		   edge_type_t type);
+int handle_edges(edge_type_t type, vertex_t *src_vertex, vertex_t *dest_vertex);
+void add_x_to_y(vertex_t *x, vertex_t *y, edge_t *edge);
 
 #endif
