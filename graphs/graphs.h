@@ -80,9 +80,13 @@ void add_x_to_y(vertex_t *x, vertex_t *y, edge_t *edge);
 void graph_delete(graph_t *graph);
 size_t depth_first_traverse(const graph_t *graph,
 			    void (*action)(const vertex_t *v, size_t depth));
-size_t breadth_first_traverse(const graph_t *graph,
-			      void (*action)(const vertex_t *v, size_t depth));
 size_t dfs_help_recurse(vertex_t *v,
 			void (*action)(const vertex_t *v, size_t depth),
 			size_t passed_depth, int *visited);
+size_t breadth_first_traverse(const graph_t *graph,
+			      void (*action)(const vertex_t *v, size_t depth));
+size_t bfs_helper(const graph_t *graph,
+		  void (*action)(const vertex_t *v, size_t depth),
+		  int *visited);
+
 #endif
