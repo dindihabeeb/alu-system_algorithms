@@ -10,11 +10,12 @@ size_t depth_first_traverse(const graph_t *graph,
 			    void (*action)(const vertex_t *v, size_t depth))
 {
 	size_t ans = 0;
+	int *visited;
 
 	if (!graph || !action)
 		return (0);
 
-	int *visited = calloc(graph->nb_vertices, sizeof(int));
+	visited = calloc(graph->nb_vertices, sizeof(int));
 
 	if (!visited)
 		return (0);
