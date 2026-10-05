@@ -1,0 +1,28 @@
+# 1. Ignore everything at the root level
+*/
+
+# 2. Allow the graphs directory itself so Git can read inside it
+!graphs/
+
+# 3. Ignore everything inside the graphs directory by default
+graphs/*
+
+# 4. Whitelist specific files inside graphs/
+!graphs/*.c
+!graphs/*.md
+!graphs/*.h
+
+# 5. Re-ignore main.c files if they match this pattern
+graphs/*main.c
+
+
+!huffman_coding/
+huffman_coding/*
+!huffman_coding/*.c
+!huffman_coding/*.md
+!huffman_coding/heap/*.h
+
+huffman_coding/rb_trees.h
+huffman_coding/binary_tree_print.c
+huffman_coding/heap.h
+huffman_coding/rb_tree_print.c
