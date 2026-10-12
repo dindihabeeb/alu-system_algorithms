@@ -11,7 +11,7 @@ binary_tree_node_t *heap_insert(heap_t *heap, void *data)
 {
 	binary_tree_node_t *new_node = NULL, *curr;
 	size_t n = 0, tmp = 0;
-	int bits = 0;
+	int bits = 0, i = 0;
 
 	if (!heap || !data)
 		return (NULL);
@@ -30,7 +30,7 @@ binary_tree_node_t *heap_insert(heap_t *heap, void *data)
 	}
 
 	curr = heap->root;
-	for (int i = bits - 2; i >= 1; i--)
+	for (i = bits - 2; i >= 1; i--)
 	{
 		if ((n >> i) & 1)
 			curr = curr->right;
