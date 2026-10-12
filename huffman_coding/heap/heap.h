@@ -35,4 +35,10 @@ typedef struct heap_s
 
 heap_t *heap_create(int (*data_cmp)(void *, void *));
 binary_tree_node_t *binary_tree_node(binary_tree_node_t *parent, void *data);
+binary_tree_node_t *heap_insert(heap_t *heap, void *data);
+binary_tree_node_t *sift_up(binary_tree_node_t *node,
+			    int (*data_cmp)(void *, void *))
+void empty_root_check(heap_t *heap, void *data,
+		      binary_tree_node_t **new_node);
+
 #endif /* HEAP_H */
