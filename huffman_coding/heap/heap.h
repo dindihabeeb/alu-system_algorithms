@@ -42,4 +42,6 @@ void empty_root_check(heap_t *heap, void *data,
 		      binary_tree_node_t **new_node);
 void *heap_extract(heap_t *heap);
 void sift_down(heap_t *heap);
+void heap_delete(heap_t *heap, void (*free_data)(void *));
+void delete_tree(binary_tree_node_t *root, void (*free_data)(void *));
 #endif /* HEAP_H */
