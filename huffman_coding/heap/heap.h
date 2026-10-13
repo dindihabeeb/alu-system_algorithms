@@ -40,5 +40,6 @@ binary_tree_node_t *sift_up(binary_tree_node_t *node,
 			    int (*data_cmp)(void *, void *));
 void empty_root_check(heap_t *heap, void *data,
 		      binary_tree_node_t **new_node);
-
+void *heap_extract(heap_t *heap);
+void sift_down(heap_t *heap);
 #endif /* HEAP_H */
